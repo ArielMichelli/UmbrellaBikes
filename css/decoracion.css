@@ -1,0 +1,374 @@
+/*==================== Estilos de letras: =======================*/
+/*===============================================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Beastly&display=swap');
+/*font-family: 'Rubik Beastly', cursive;*/
+@import url('https://fonts.googleapis.com/css2?family=Gluten:wght@200;300&family=Rubik+Beastly&display=swap');
+/*font-family: 'Gluten', cursive;*/
+@import url('https://fonts.googleapis.com/css2?family=Gluten:wght@200;300&family=Rubik+Beastly&family=Stick+No+Bills&display=swap');
+/*font-family: 'Stick No Bills', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Akronim&display=swap');
+/*font-family: 'Akronim', cursive;*/
+@import url('https://fonts.googleapis.com/css2?family=Gluten:wght@200&display=swap');
+/*font-family: 'Gluten', cursive;*/
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+/*font-family: 'Monoton', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap');
+/*font-family: 'Teko', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&family=Teko:wght@300&display=swap');
+/*font-family: 'Orbitron', sans-serif;*/
+
+*{
+    margin: 0;
+}
+
+/*==================== NAV principal + MENU =====================*/
+/*===============================================================*/
+.grilla{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(12, 1fr);
+}
+.login{
+    margin-right: 0;
+    margin-left: auto;
+}
+nav a{
+    text-decoration: none;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5em;
+    padding: 5px;
+    color: white;
+}
+.main h3{
+    font-size: 3em;
+    align-items: center;
+}
+.grilla .header{
+    grid-column-end: span 12;
+}
+
+.grilla .header video{
+    width: 100%;
+    height: auto;
+    display: flex;
+    overflow: hidden;
+    z-index: -2;
+}
+.absoluto{
+    width: 100%;
+    top:0;
+    right: 0;
+    position: absolute;
+    z-index: 2;
+}
+.absoluto ul{
+    list-style-type: none;
+    margin-top: 0.2rem;
+    padding: 0%;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.absoluto ul li{
+    display: inline-block;
+}
+.absoluto  ul li a{
+    display: block;
+    padding: 20px 40px;
+}
+.absoluto ul li a:hover{
+    background-color: #42B881;
+    color: black;
+}
+.item-r{
+    float: right;
+}
+
+.tituloDelMedio{
+    text-align: center;
+    font-size: 3.5em;
+    font-family: 'Orbitron', sans-serif;
+}
+
+/*==================== MENU ==========================*/
+/*====================================================*/
+.menu{
+    margin: 1rem;
+    color: white;
+    float: right;
+    display: none;
+    font-size: 2em;
+    padding: 5px;
+    border-radius: 10px;
+    border-color: black;
+    border-style: double;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/*==================== PARTE RESPONSIVA (pagina principal) + MENU =====================*/
+/*=====================================================================================*/
+
+/*TABLET*/
+@media (max-width: 1200px){
+    .grilla > * {
+        grid-column-end: span 6;
+    }
+    .grilla{
+        gap: 0;
+    }
+    .grilla .casiPie{
+        width: 100%;
+        height: 350px;
+    }
+    .tituloDelMedio{
+        font-size: 3em;
+    }
+    .item-r{
+        float: none;
+    }
+    
+    /*MENU*/
+    .absoluto ul li{
+        display: block;
+        background-color: rgba(0,0,0,0.5);
+    }
+    .absoluto{
+        width: 100%;
+    }
+    .menu{
+        display: block;
+        cursor: pointer;
+    }
+    .absoluto ul{
+        display: none;
+    }
+    .absoluto ul.show{
+    display: block;
+    }
+}
+/*CELULAR*/
+@media (max-width: 500px){
+    .grilla > * {
+        grid-column-end: span 12;
+    }
+    .grilla{
+        gap: 0;
+    }
+    .grilla .casiPie{
+        width: 100%;
+        height: 150px;
+    }
+    .tituloDelMedio{
+        font-size: 2em;
+    }
+    .item-r{
+        float: none;
+    }
+
+}
+
+/*==================== GALERIA =======================*/
+/*====================================================*/
+
+.gallery-container{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: 250px;
+    padding: 35px;
+    background-color: black;
+    grid-gap: 15px;
+}
+
+.gallery__img{
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+}
+.gallery__item{
+    position: relative;
+}
+.gallery__title{
+    position: absolute;
+    color: white;
+    background: linear-gradient(rgba(255,255,255,0),rgba(0,0,0,1));
+    bottom: 0;
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+}
+.gallery-container img:hover {
+    -webkit-transform:scale(1);
+    transform:scale(0.9);
+    border-style: solid;
+    border-color: rgba(0, 0, 255, 0.65);
+}
+
+@media (max-width:1200px){
+    .gallery-container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width:800px){
+    .gallery-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/*==================== FOOTER ========================*/
+/*====================================================*/
+
+footer{
+    bottom: 0px;
+    width: 100%;
+    color: rgba(255, 255, 255,0.8);
+}
+footer h1{
+    color: rgba(255, 255, 255,0.8);
+    font-family: 'Monoton', cursive;
+    font-size: 3vw;
+    text-align: center;
+}
+
+footer .grilla{
+    color: white;
+    font-size: 1.3rem;
+    font-family: 'Gluten', cursive;
+    font-weight: bold;
+
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.redes-container{
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.redes-container ul li{
+    display: inline-block;
+    font-size: 2.0vw;
+    padding: 20px;
+    align-content: center;
+}
+
+.redes-container a{
+    text-decoration: none;
+    color: rgba(255, 255, 255,0.8);
+}
+
+.redes-container a:hover{
+    transform:scale(1.2);
+    color: rgba(0, 255, 55, 0.7);
+}
+
+footer{
+    background: linear-gradient(to left,rgba(22, 71, 22, 0.5),rgba(0, 60, 255, 0.5));
+    width: 100%;
+    background-position: center;    /* centrar imagen */
+    background-repeat: no-repeat;   /* evitar que se repita */
+    background-size: cover;
+}
+
+/*=========== CLASE BOTON ============ */
+.boton{
+    color: white;
+    margin: 10px;
+    font-size: 1.5em;
+    border-radius: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color:blue;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.boton:hover{
+    background-color: rgb(18, 18, 206);
+}
+
+/*==================== ACERCA DE =====================*/
+/*====================================================*/
+.mainAbout{
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1rem;
+    
+}
+.mainAbout h1{
+    text-align: center;
+}
+.mainAbout img{
+    margin: 0;
+    margin-top: 0;
+    width: 100%;
+    height: 150vh;
+    object-position: bottom;
+    object-fit: cover;
+}
+
+.mainAbout .contenido{
+    text-align: left;
+    margin-left: 30vw;
+    margin-right: 30vw;
+}
+.mainAbout .contenedor2 img{
+    margin: 0;
+    padding: 0;
+    width: 49.8%;
+    height: 55vh;
+    object-fit: cover;
+}
+@media (max-width:1000px){
+        .mainAbout .contenedor2 img{
+            width: 100%;
+        }
+        .mainAbout img{
+            width: 100%;
+            height: 50%;
+        }
+}
+
+/*==================== SUCURSALES ======================*/
+/*======================================================*/
+
+.grillaSucursales{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    gap: 20px;
+    margin: 20px 20px;
+}
+.grillaSucursales .direcciones{
+    padding: 50px 25px;
+    background-color:rgba(38, 116, 90, 0.301);
+    
+
+}
+.grillaSucursales .direcciones .direccion{
+    margin: 20px;
+    width: 50%;
+  
+}
+.grillaSucursales .mapa{
+    display: block;
+    width: 99%;
+    height: 100%;
+    align-items: center;
+}
+
+@media (max-width: 1000px){
+    .grillaSucursales{
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 1fr;
+    }
+    .grillaSucursales .direcciones .direccion{
+        font-size:1.3em;
+        width: 100%;
+    }
+    
+}
+
+/*==================== LOGIN =========================*/
+/*====================================================*/
+
+.bg{
+    background: url("../imagenes/Log/12.jpg")  no-repeat  center center ;
+    background-size: cover;   
+}

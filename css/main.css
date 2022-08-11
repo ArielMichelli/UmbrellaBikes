@@ -1,0 +1,76 @@
+*{
+    box-sizing:  border-box;
+    margin: 0;
+}
+
+.grid-item{
+    display: flex;
+    border-style:solid;
+    border-color: black;
+    border: black;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 1em;
+    padding: 20px;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    border-style:solid;
+    border-color: black;
+  
+}
+
+/*============= EFECTO HOVER ============*/
+.general{
+    position: relative;
+    overflow: hidden;
+}
+.titulo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(90,0,10,0.4);
+    /*ESTILO DEL TITULO*/
+    color: white;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-decoration: none;
+    /* POSICION */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*Hace que el titulo no sea visible*/
+    opacity: 0;
+    transition: opacity .5s;
+    z-index: 1;
+}
+.imagen{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    line-height: 0;
+    filter: blur(0px);
+    transition: filter 0.3s ease-in;
+}
+.general:hover .titulo{
+    opacity: 1;
+}
+.general:hover .imagen img{
+    filter: blur(2px);
+}
+
+@media (max-width: 1000px){
+    .grid-container{
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(1,1fr);
+    }
+
+}

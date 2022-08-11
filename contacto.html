@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/decoracion.css">
+    <link rel="stylesheet" href="./css/formulario_contacto.css">
+
+<body>
+    <br>
+    <a class="boton" href="./index.html">Volver</a>
+    <br>
+    <br>
+    <br>
+    <main>
+        <div class="contenedor_contacto_titulo">
+            <u>
+                <h1>¿Quieres contactar con nosotros? </h1>
+            </u>
+            <br> <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia beatae cumque accusamus dignissimos
+                cum. Dolorum nostrum in quia temporibus optio consectetur delectus ab fugiat nisi ipsa, excepturi illum
+                tempore laboriosam!</p>
+            <br> <br>
+        </div>
+
+        <div class="contenedorContacto">
+            <form action="" class="formulario" id="formulario">
+                <!-- Grupo Usuario: -->
+                <div class="formulario_grupo" id="grupo_usuario">
+                    <label for="usuario" class="formulario_label">Usuario:</label>
+                    <div class="formulario_grupo_input">
+                        <input type="text" class="formulario_input" name="usuario" id="usuario" placeholder="">
+                        <i class="formulario_validacion_estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="formulario_input_error">El usuario tiene que ser de 4 a 16 digitos y solo puede contener
+                        numeros, letras y guin bajo.</p>
+                </div>
+
+                <!-- Grupo Nombre: -->
+                <div class="formulario_grupo" id="grupo_nombre">
+                    <label for="nombre" class="formulario_label">Nombre:</label>
+                    <div class="formulario_grupo_input">
+                        <input type="text" class="formulario_input" name="nombre" id="nombre" placeholder="">
+                        <i class="formulario_validacion_estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="formulario_input_error">El nombre tiene que ser de 2 a 25 digitos, puede contener letras y
+                        espacios</p>
+                </div>
+
+                <!-- Grupo Contraseña/password: -->
+                <div class="formulario_grupo" id="grupo_password">
+                    <label for="password" class="formulario_label">Contraseña:</label>
+                    <div class="formulario_grupo_input">
+                        <input type="password" class="formulario_input" name="password" id="password">
+                        <i class="formulario_validacion_estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="formulario_input_error">La contraseña tiene que ser de 4 a 12 digitos.</p>
+                </div>
+
+                <!-- Grupo Contraseña2/password2: -->
+                <div class="formulario_grupo" id="grupo_password2">
+                    <label for="password2" class="formulario_label">Repetir Contraseña:</label>
+                    <div class="formulario_grupo_input">
+                        <input type="password" class="formulario_input" name="password2" id="password2">
+                        <i class="formulario_validacion_estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="formulario_input_error">Las contraseñas no coinciden...</p>
+                </div>
+
+                <!-- Grupo Correo Electronico: -->
+                <div class="formulario_grupo" id="grupo_correo">
+                    <label for="correo" class="formulario_label">Correo Electrónico:</label>
+                    <div class="formulario_grupo_input">
+                        <input type="text" class="formulario_input" name="correo" id="correo" placeholder="">
+                        <i class="formulario_validacion_estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="formulario_input_error">El correo solo puede contener letras, numeros, puntos, giones y
+                        guion bajo.</p>
+                </div>
+
+                <!-- Grupo Teléfono: -->
+                <div class="formulario_grupo" id="grupo_telefono">
+                    <label for="telefono" class="formulario_label">Teléfono: </label>
+                    <div class="formulario_grupo_input">
+                        <input type="text" class="formulario_input" name="telefono" id="telefono" placeholder="">
+                        <i class="formulario_validacion_estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="formulario_input_error">El telefono solo puede contener numeros y el maximo son 14
+                        digitos.</p>
+                </div>
+
+                <!-- Grupo Terminos y Condiciones: -->
+                <div class="formulario_grupo" id="grupo_terminos">
+                    <label class="formulario_label">
+                        <input class="formulario_checkbox" type="checkbox" name="terminos" id="terminos">
+                        Acepto los Terminos y Condiciones
+                    </label>
+
+                </div>
+
+                <div class="formulario_mensaje" id="formulario_mensaje">
+                    <p><i class="fas fa-exclamation-triangle"></i><b>Error</b> Por favor rellenar el formulario
+                        correctamente y aceptar terminos-condiciones.</p>
+                </div>
+                <div class="formulario_grupo formulario_grupo_btn_enviar">
+                    <button type="submit" class="formulario_btn">Enviar</button>
+                    <p class="formulario_mensaje_exito" id="formulario_mensaje_exito">Formulario enviado exitosamente!!
+                    </p>
+                </div>
+
+            </form>
+        </div>
+    </main>
+
+    <script src="https://kit.fontaweasome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    <script src="./js/formulario.js"></script>
+</body>
+
+
+
+</html>
